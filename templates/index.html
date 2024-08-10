@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BERT Based Afaan Oromoo Fake News Detection Model</title>
+</head>
+<body style="background-color: rgb(168, 166, 166);">
+    <div class="login" style="margin-top: 150px;">
+        <h1 style="color: rgb(70, 6, 6); text-align: center;">Afaan Oromoo Fake News Detection</h1>
+
+        <form action="{{url_for('predict')}}", method="post" >
+            <table style="margin-left: 430px;">
+                <tr>
+                    <td> Input the News: </td>
+                    <td><textarea name="news" style ="width: 385px; min-height: 75px; border-radius:6px;"  placeholder="Enter the news here to check its authenticity ..." required autofocus></textarea></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" name="ok" style="background-color: black; color: white;font-weight: bold;border-radius: 12px;">Verify Now</button></td>
+                </tr>
+            </table>
+        </form>
+        <br><br> <h5 style="color: rgb(70, 6, 6);margin-left: 550px;">{{prediction_text}}</h5>
+
+    </div>
+</body>
+</html>
